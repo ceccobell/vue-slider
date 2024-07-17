@@ -56,12 +56,16 @@ createApp({
         },
 
         autoPlay() {
-            this.autoplayInterval = setInterval(this.nextImage, 3000)
+            if (this.autoplayInterval === null) {
+                this.autoplayInterval = setInterval(this.nextImage, 3000);
+            }
         },
 
         removeAutoPlay() {
-            clearInterval(this.autoplayInterval)
-            this.autoplayInterval = null
+            if (this.autoplayInterval !== null) {
+                clearInterval(this.autoplayInterval);
+                this.autoplayInterval = null;
+            }
         },
 
         reverseAutoPlay() {

@@ -13,7 +13,7 @@
         <div class="img-container">
             <div id="row">
                 <div id="main-img">
-                    <img :src="images[active_img].image" :alt="images[active_img].title">
+                    <img :src="images[active_img].image" :alt="images[active_img].title" @mouseenter="removeAutoPlay()" @mouseleave="autoPlay()">
                     <div class="p-abs">
                         <h2>{{ images[active_img].title }}</h2>
                         <div>{{ images[active_img].text }}</div>
