@@ -28,8 +28,8 @@
                 </div>
             </div>
             <div class="col-100">
-                <button type="button" class="btn btn-primary btn-lg" id="start">Start</button>
-                <button type="button" class="btn btn-primary btn-lg" id="stop">Stop</button>
+                <button type="button" class="btn btn-primary btn-lg" id="start" @click="autoPlay()">Start</button>
+                <button type="button" class="btn btn-primary btn-lg" id="stop" @click="removeAutoPlay()">Stop</button>
                 <button type="button" class="btn btn-primary btn-lg" id="reverse">Reverse</button>
             </div>
         </div>
