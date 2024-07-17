@@ -45,14 +45,6 @@ img {
     object-fit: cover;
 }
 
-.d-none {
-    display: none;
-}
-
-.d-block {
-    display: block;
-}
-
 .btn-up-down {
     border-radius: 50%;
     width: 20%;
