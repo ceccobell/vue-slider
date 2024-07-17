@@ -12,8 +12,13 @@
     <div id="app">
         <div class="img-container">
             <div id="row">
-                <div id="main-img"></div>
+                <div id="main-img" v-for="img, index in images">
+                    <img :src="img.image" alt="">
+                </div>
                 <div id="container-side-img">
+                    <div v-for="img, index in images" class="side-img">
+                        <img :src="img.image" alt="">
+                    </div>
                     <button class="btn-up-down" id="caret-up"><i class="fa-solid fa-caret-up"></i></button>
                     <button class="btn-up-down" id="caret-down"><i class="fa-solid fa-caret-down"></i></button>
                 </div>
