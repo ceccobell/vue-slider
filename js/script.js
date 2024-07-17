@@ -48,6 +48,10 @@ createApp({
             } else {
                 this.active_img--
             }
+        },
+
+        setActiveImage(index) {
+            this.active_img = index
         }
 
     }

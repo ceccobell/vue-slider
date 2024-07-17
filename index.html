@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div id="container-side-img">
-                    <div v-for="img, index in images" class="side-img" :class="active_img == index ? 'active' : ''">
+                    <div v-for="img, index in images" @click="setActiveImage(index)" class="side-img" :class="active_img == index ? 'active' : ''">
                         <img :src="img.image" :alt="img.title" >
                     </div>
                     <button class="btn-up-down" id="caret-up" @click="prevImage()"><i class="fa-solid fa-caret-up"></i></button>
