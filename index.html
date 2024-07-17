@@ -14,6 +14,10 @@
             <div id="row">
                 <div id="main-img">
                     <img :src="images[active_img].image" :alt="images[active_img].title">
+                    <div class="p-abs">
+                        <h2>{{ images[active_img].title }}</h2>
+                        <div>{{ images[active_img].text }}</div>
+                    </div>
                 </div>
                 <div id="container-side-img">
                     <div v-for="img, index in images" class="side-img" :class="active_img == index ? 'active' : ''">
