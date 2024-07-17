@@ -12,15 +12,15 @@
     <div id="app">
         <div class="img-container">
             <div id="row">
-                <div id="main-img" v-for="img, index in images">
-                    <img :src="img.image" alt="">
+                <div id="main-img">
+                    <img :src="images[active_img].image" :alt="images[active_img].title">
                 </div>
                 <div id="container-side-img">
                     <div v-for="img, index in images" class="side-img">
                         <img :src="img.image" alt="">
                     </div>
-                    <button class="btn-up-down" id="caret-up"><i class="fa-solid fa-caret-up"></i></button>
-                    <button class="btn-up-down" id="caret-down"><i class="fa-solid fa-caret-down"></i></button>
+                    <button class="btn-up-down" id="caret-up" @click="prevImage()"><i class="fa-solid fa-caret-up"></i></button>
+                    <button class="btn-up-down" id="caret-down" @click="nextImage()"><i class="fa-solid fa-caret-down"></i></button>
                 </div>
             </div>
             <div class="col-100">
