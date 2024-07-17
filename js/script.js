@@ -62,6 +62,11 @@ createApp({
         removeAutoPlay() {
             clearInterval(this.autoplayInterval)
             this.autoplayInterval = null
+        },
+
+        reverseAutoPlay() {
+            this.removeAutoPlay()
+            this.autoplayInterval = setInterval(this.prevImage, 3000)
         }
 
     }
